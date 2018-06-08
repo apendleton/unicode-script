@@ -179,7 +179,7 @@ def emit_script_module(f, script_table):
 
     emit_table(f, "script_table", data, "&'static [(char, char, Script)]",
         pfun=lambda x: "(%s,%s,%s)" % (escape_char(x[0]), escape_char(x[1]), x[2]),
-        is_pub=False)
+        is_pub=True)
 
 def escape_char(c):
     return "'\\u{%x}'" % c
